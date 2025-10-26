@@ -27,8 +27,7 @@ endif
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/exthm/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
-    vendor/exthm/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/exthm/prebuilt/common/bin/50-exthm.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-exthm.sh
+    vendor/exthm/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions
 
 ifneq ($(strip $(AB_OTA_PARTITIONS) $(AB_OTA_POSTINSTALL_CONFIG)),)
 PRODUCT_COPY_FILES += \
@@ -110,21 +109,18 @@ PRODUCT_PACKAGES += \
 # Lineage packages
 PRODUCT_PACKAGES += \
     LineageParts \
-    LineageSettingsProvider \
-    LineageSetupWizard
+    LineageSettingsProvider
 
 # Core exTHmUI packages
 PRODUCT_PACKAGES += \
     SoftAPManager \
     ThemeManager \
-    Updater \
     GamingMode
 
 # Custom exTHmUI packages
 PRODUCT_PACKAGES += \
     StitchImage \
-    StitchImageService \
-    APlayer
+    StitchImageService
 
 # exTHmUI Theme
 PRODUCT_PACKAGES += \
@@ -185,10 +181,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_PACKAGES_DEBUG += \
     procmem
 
+ifneq ($(TARGET_BUILD_VARIANT),user)
 # Root
 PRODUCT_PACKAGES += \
     adb_root
-ifneq ($(TARGET_BUILD_VARIANT),user)
 ifeq ($(WITH_SU),true)
 PRODUCT_PACKAGES += \
     su

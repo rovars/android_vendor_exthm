@@ -13,9 +13,7 @@ PRODUCT_PACKAGES += \
 
 # Telephony packages
 PRODUCT_PACKAGES += \
-    messaging \
-    Stk \
-    YellowPage
+    messaging
 
 # Default ringtone
 PRODUCT_PRODUCT_PROPERTIES += \

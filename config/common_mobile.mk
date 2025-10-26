@@ -6,25 +6,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.config.notification_sound=Argon.ogg \
     ro.config.alarm_alert=Hassium.ogg
 
-# AOSP packages
-PRODUCT_PACKAGES += \
-    Email \
-    Calculator \
-    Exchange2
-
 # Lineage packages
 PRODUCT_PACKAGES += \
     Backgrounds \
-    Eleven \
-    Etar \
-    ViaBrowser \
-    Profiles \
-    Seedvault
-
-ifneq ($(TARGET_EXCLUDES_AUDIOFX),true)
-PRODUCT_PACKAGES += \
-    AudioFX
-endif
+    Profiles
 
 ifeq ($(PRODUCT_TYPE), go)
 PRODUCT_PACKAGES += \
