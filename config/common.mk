@@ -201,7 +201,7 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/exthm/overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/exthm/overlay/common
-
+PRODUCT_PACKAGE_OVERLAYS += vendor/crowdin/overlay
 
 # GApps
 ifeq ($(EXTHM_GAPPS),true)
